@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameConfig.gd" type="Script" id=1]
+
+[node name="GameConfig" type="Node"]
+script = ExtResource( 1 )
+
+[connection signal="game_ended" from="." to="." method="_on_GameConfig_game_ended"]
+[connection signal="mark_added" from="." to="." method="_on_GameConfig_mark_added"]

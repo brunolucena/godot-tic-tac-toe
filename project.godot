@@ -1,0 +1,49 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "ColorRect",
+"class": "Board",
+"language": "GDScript",
+"path": "res://Board.gd"
+}, {
+"base": "TextureProgress",
+"class": "ImageClass",
+"language": "GDScript",
+"path": "res://Image.gd"
+}, {
+"base": "Area2D",
+"class": "Mark",
+"language": "GDScript",
+"path": "res://Mark.gd"
+} ]
+_global_script_class_icons={
+"Board": "",
+"ImageClass": "",
+"Mark": ""
+}
+
+[application]
+
+config/name="Tic Tac Toe"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+GameConfig="*res://GameConfig.tscn"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
